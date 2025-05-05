@@ -1,8 +1,8 @@
-.root {
-    --color1: white;
-    --color2: rgba(255, 255, 255, 0.884);
+:root {
+    --color1: grey;
 }
 .containerone{
+    max-width: 1264px;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -13,20 +13,29 @@
 
 
 .furniro{
-    background-color:var(--color1);
+    max-width: 1264px;
     width: 100%;
     height: 70px;
     margin: 0 auto;
+    margin-bottom: 20px;
     font-family:sans-serif;
     display:flex;
+    font-size: 20px;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
 }
 .furniro img{
-   height: 60px;
-   width: 220px;
-}
+    height: 60px;
+    width: 220px;
+ }
+ .photo img{
+    max-width: 1264px;
+    height: 600px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+ }
+ 
 h6{
    margin: 40px;
    display: inline-block;
@@ -39,7 +48,7 @@ h6{
 }
 
 .furnirochild .zemot1:hover{
-   color: rgb(139, 135, 135)
+   color:var(--color1)
 }
 
 .furnirochild .zemot2:hover{
@@ -47,11 +56,11 @@ h6{
  }
  
 .furnirochild .zemot3:hover{
-    color: rgb(139, 135, 135)
+    color:var(--color1)
  }
  
 .furnirochild .zemot4:hover{
-    color: rgb(139, 135, 135)
+    color:var(--color1)
  }
 
 .symbols{
@@ -64,17 +73,14 @@ h6{
 .fa-solid{
    margin: 10px;
 }
-.photo img{
-   height: 600px;
-   width: 100%;
-   margin: 0 auto;
-   margin-bottom: 20px;
-}
 
 .title{
-    height: 400px;
+    max-width: 1264px;
     width: 100%;
     text-align: center;
+}
+.one{
+    color:var(--color1);
 }
 
 h1{
@@ -86,11 +92,12 @@ h1{
 .texts p .one{
     text-align: center;
     font-size: 16px;
-    color: grey;
+    color:var(--color1);
    
 }
 
 .title img{
+    max-width: 1264px;
    margin: 0 auto;
    width: 100%;
    margin-top: 20px;
@@ -119,34 +126,18 @@ width: 200px;
 width: 200px;
 }
 .titleone{
-    height: 1000px;
+    max-width: 1264px;
+    margin-bottom:30px;
     width: 100%; 
 }
 .titleone .img{
     margin: 0 auto;
 }
 
-.titletwo{
-height:45px; ;
-width: 100%px;
-margin: 0 auto;
-margin-top: 20px;
-}
-
-.titletwo img{
-    width: 100%;
-    height: 600px;
-    margin: 0 auto;
-    margin-bottom: 20px;
- }
-
 .titlethree{
-    text-align: center;
     margin: 0 auto;
-    height: 45px;
     width: 200px;
     border: 2px solid rgb(196, 132, 13);
-    line-height: 45px;
     transition: 0.1s;
 }
 
@@ -155,6 +146,7 @@ margin-top: 20px;
     border: 2px solid rgb(125, 84, 9);
 }
 .outline{
+    max-width: 1264px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -171,7 +163,7 @@ margin-top: 15px;
     font-size: 24px;
 }
 
-.titlethree .img2{
+.outline .img2{
     width: 100%;
     height: 600px;
  }
@@ -218,7 +210,6 @@ margin-top: 15px;
     }
     
  .footer {
-    background-color: #f8f8f8;
     padding: 50px 20px;
     font-family: 'Arial', sans-serif;
 }
@@ -242,11 +233,9 @@ margin-top: 15px;
 }
 
 .footer-address {
-    line-height: 1.6;
     color: #666;
 }
 
-.footer-links h3,
 .footer-newsletter h3 {
     font-size: 18px;
     margin-bottom: 20px;
@@ -264,12 +253,12 @@ margin-top: 15px;
 
 .footer-links a {
     text-decoration: none;
-    color: #666;
+    color: black;
     transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: #000;
+    color: grey;
 }
 
 .footer-newsletter input {
@@ -289,12 +278,34 @@ margin-top: 15px;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ;
+    animation: movewindow 3s infinite alternate ;
 }
 
 .footer-newsletter button:hover {
-    background-color: #333;
-}       
+    background-color: rgb(37, 36, 36);
+}     
+@keyframes movewindow {
+    0% {
+        translate: 15px 0;
+    }
+
+    25% {
+        translate: -15px 0;
+    }
+
+    50% {
+        translate: 15px 0;
+    }
+
+    75% {
+        translate: -15px 0;
+    }
+
+    100% {
+        translate: 15px 0;
+    }
+}
         .container {
             width: 90%;
             max-width: 1200px;
@@ -304,7 +315,6 @@ margin-top: 15px;
         .logoone {
             font-size: 24px;
             font-weight: 700;
-            color: var(--primary);
         }
         
         nav ul {
@@ -317,70 +327,4 @@ margin-top: 15px;
             text-decoration: none;
             color: var(--text);
             font-weight: 500;
-        }
-        
-        .header-icons {
-            display: flex;
-            gap: 20px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 500px;
-            background-color: var(--secondary);
-            display: flex;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-        
-        .hero-content {
-            max-width: 500px;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
-        .cta-button {
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .cta-button:hover {
-            background-color: #d88a5a;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-        
-        .product-card {
-            background-color: var(--light-gray);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .product-image {
-            height: 300px;
-            background-color: #ddd;
-            position: relative;
         }
